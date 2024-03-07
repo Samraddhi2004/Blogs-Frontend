@@ -1,10 +1,8 @@
 import { Button } from "@nextui-org/react"
-import Navbar from "../components/Navbar.jsx"
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <div className="md:grid md:grid-cols-2">
 
         {/* Hero Section */}
