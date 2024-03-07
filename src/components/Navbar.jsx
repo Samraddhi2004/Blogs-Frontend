@@ -8,17 +8,17 @@ export default function App() {
       </NavbarBrand>
       <NavbarContent className="sm:flex md:gap-24" justify="center">
         <NavbarItem>
-          <Link className="text-white text-lg hover:text-pastal" href="#">
+          <Link className="text-white text-lg hover:text-pastal" href="/">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="#" className="text-white text-lg hover:text-pastal">
+          <Link href="/blogs" className="text-white text-lg hover:text-pastal">
             Blogs
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-white text-lg hover:text-pastal" href="#">
+          <Link className="text-white text-lg hover:text-pastal" href="/create">
             Create
           </Link>
         </NavbarItem>

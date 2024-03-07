@@ -1,6 +1,10 @@
 import { Button } from "@nextui-org/react"
+import { useNavigate } from "react-router-dom"
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="md:grid md:grid-cols-2">
@@ -12,8 +16,8 @@ const Home = () => {
           <p className="mt-5 md:ml-20 font-semibold text-xl text-center md:text-start mx-10 text-pastal">Discover a world of inspiration. Dive into captivating stories, unlock hidden insights, and explore limitless possibilities.</p>
 
           <div className="flex justify-center my-10 mx-40 gap-16">
-            <Button variant="shadow" color="primary">Visit Blogs</Button>
-            <Button variant="ghost" color="primary">Create Blog</Button>
+            <Button variant="shadow" color="primary" onClick={()=>navigate('/blogs')}>Visit Blogs</Button>
+            <Button variant="ghost" color="primary" onClick={()=>navigate('/create')}>Create Blog</Button>
           </div>
 
         </div>
