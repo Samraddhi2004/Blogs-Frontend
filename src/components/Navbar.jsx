@@ -1,10 +1,12 @@
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link} from "@nextui-org/react";
 
 export default function App() {
+
   return (
     <Navbar shouldHideOnScroll className="bg-black">
       <NavbarBrand>
-        <p className="font-bold text-inherit text-white text-2xl">Blogs</p>
+        {/* <p className="font-bold text-inherit text-white text-2xl"></p> */}
+        <Link href="/"><img src="/logo.png" className="w-auto h-12"/></Link>
       </NavbarBrand>
       <NavbarContent className="sm:flex md:gap-24" justify="center">
         <NavbarItem>

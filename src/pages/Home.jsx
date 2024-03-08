@@ -24,7 +24,7 @@ const Home = () => {
 
         {/* Image */}
         <div className="mx-10 mb-16 md:mx-0 ">
-          <img src="/public/home.png" className="md:w-[75%] md:ml-24 md:mt-10"/>
+          <img src="/home.png" className="md:w-[75%] md:ml-24 md:mt-10"/>
         </div>
 
       </div>
