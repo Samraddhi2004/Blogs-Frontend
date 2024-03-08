@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://blogs-backend-t1i9.onrender.com",
+  "proxy": "https://blogs-backend-t1i9.onrender.com", 
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && echo '/* /index.html 200' | cat >build/_redirects",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
