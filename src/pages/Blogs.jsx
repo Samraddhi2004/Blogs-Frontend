@@ -1,64 +1,31 @@
+import { useEffect, useState } from "react";
 import Card from "../components/Card";
-
-const blogs = [
-    {
-        Title: "NextUI",
-        Domain: "nextui.org",
-        Data: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ducimus quasi vitae reprehenderit et, totam enim nisi architecto, dicta quaerat eum culpa sunt ea minus voluptatem veritatis perspiciatis impedit a nam, repudiandae obcaecati ratione quia asperiores. Laudantium, iure sint, deleniti ad aliquid dolore, assumenda vel omnis ex quod hic necessitatibus.",
-        Author: "nextui-org",
-        Date: "2021-10-01"
-    },
-    {
-        Title: "Dell",
-        Domain: "HP.org",
-        Data: "Make beautiful websites regardless of your design experience.",
-        Author: "nextui-org",
-        Date: "2021-10-01"
-    },
-    {
-        Title: "NextUI",
-        Domain: "nextui.org",
-        Data: "Make beautiful websites regardless of your design experience.",
-        Author: "nextui-org",
-        Date: "2021-10-01"
-    },
-
-    {
-        Title: "NextUI",
-        Domain: "nextui.org",
-        Data: "Make beautiful websites regardless of your design experience.",
-        Author: "nextui-org",
-        Date: "2021-10-01"
-    },
-    {
-        Title: "NextUI",
-        Domain: "nextui.org",
-        Data: "Make beautiful websites regardless of your design experience.",
-        Author: "nextui-org",
-        Date: "2021-10-01"
-    },
-    {
-        Title: "NextUI",
-        Domain: "nextui.org",
-        Data: "Make beautiful websites regardless of your design experience.",
-        Author: "nextui-org",
-        Date: "2021-10-01"
-    },
-    {
-        Title: "NextUI",
-        Domain: "nextui.org",
-        Data: "Make beautiful websites regardless of your design experience.",
-        Author: "nextui-org",
-        Date: "2021-10-01"
-    }
-]
+import axios from "axios";
 
 const Blogs = () => {
-  return (
+
+    const [blog, setBlog] = useState([])
+
+    const fetchData = () => {axios.get("https://blogs-backend-t1i9.onrender.com/getAllBlogs", {
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+        }
+    })
+    .then((res) => {
+        setBlog(res.data.blog)
+        console.log(res.data.blog);
+    })}
+
+    useEffect(()=>{
+        fetchData();
+    },[])
+
+    return (
     <div className="flex justify-around bg-blue-200 h-full ">
         <div className="md:grid md:grid-cols-3 md:gap-16 py-9 ">
-            {blogs && blogs.map((blog, index) => (
-                <Card key={index} blog={blog} />
+            {blog && blog.map((b, index) => (
+                <Card key={index} blog={b} />
             ))}
         </div>
     </div>

@@ -14,15 +14,15 @@ export default function App({blog}) {
             width={80}
         />
         <div className="ml-4 flex flex-col">
-            <p className="text-xl font-bold text-black">{blog.Title}</p>
-            <p className="font-semibold">Domain : <span className="text-pastal font-bold">{blog.Domain}</span></p>
-            <p className="font-semibold">Author : <span className="text-pastal font-bold">{blog.Author}</span></p>
+            <p className="text-xl font-bold text-black">{blog.title}</p>
+            <p className="font-semibold">Domain : <span className="text-pastal font-bold">{blog.domain}</span></p>
+            <p className="font-semibold">Author : <span className="text-pastal font-bold">{blog.author}</span></p>
         </div>
     </CardHeader>
       <Divider/>
       <CardBody>
-        <p>Date : <span className="text-blue-500">{blog.Date}</span></p>
-        <p className="mt-2">{blog.Data.substring(0,150)}...</p>
+        <p>Date : <span className="text-blue-500">{blog.date}</span></p>
+        <p className="mt-2">{blog.data.substring(0,150)}...</p>
       </CardBody>
       <Divider/>
       <CardFooter>

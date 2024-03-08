@@ -11,10 +11,10 @@ export default function App({blog}) {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 text-center text-2xl font-bold">{blog.Title}</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 text-center text-2xl font-bold">{blog.title}</ModalHeader>
               <ModalBody>
                 <p className="text-lg">
-                  {blog.Data}
+                  {blog.data}
                 </p>
               </ModalBody>
               <ModalFooter>
