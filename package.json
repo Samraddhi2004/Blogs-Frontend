@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://blogs-backend-t1i9.onrender.com", 
+  "proxy": "https://blogs-backend-t1i9.onrender.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,7 +13,7 @@
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
     "@nextui-org/react": "^2.2.10",
-    "axios": "^1.6.7",
+    "axios": "^1.3.1",
     "dotenv": "^16.4.5",
     "framer-motion": "^11.0.8",
     "react": "^18.2.0",
